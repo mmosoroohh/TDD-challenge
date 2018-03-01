@@ -21,7 +21,7 @@ class PhonebookTestCase(unittest.TestCase):
 		response = contact.update_contact("Osoro", "03737373")
 		self.assertEqual(response["message"], "Contact updated")
 		
-	def test_cannot_update_contact(self):
+	def test_cannot_duplicate_update_contact(self):
 		pass
 
 	def test_view_contact(self):
@@ -31,7 +31,7 @@ class PhonebookTestCase(unittest.TestCase):
 		
 	def test_remove_contact(self):
 		contact = Phonebook()
-		response = contact.remove_contact("")
+		response = contact.remove_contact(" ")
 		self.assertEqual(response["message"], "Contact deleted")
 		
 
